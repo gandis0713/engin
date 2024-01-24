@@ -1,9 +1,12 @@
+#include <jipu/driver.h>
 #include <spdlog/spdlog.h>
 
 int main(int argc, char** argv)
 {
-    spdlog::set_level(spdlog::level::trace);
-    spdlog::debug("hello world.");
-    
+    jipu::DriverDescriptor driverDescriptor{
+        .type = jipu::DriverType::kVulkan
+    };
+    auto driver = jipu::Driver::create(driverDescriptor);
+
     return 0;
 }
