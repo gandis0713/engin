@@ -21,7 +21,12 @@
             "program": "${workspaceFolder}/build/arm64-osx-ninja/debug/engin",
             "args": [],
             "stopAtEntry": false,
-            "environment": [],
+            "environment": [
+                {
+                    "name": "DYLD_LIBRARY_PATH",
+                    "value": "${env:VULKAN_SDK}/lib"
+                }
+            ],
             "cwd": "${workspaceFolder}",
             "MIMode": "lldb",
             "targetArchitecture": "arm64",
