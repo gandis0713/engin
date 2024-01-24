@@ -1,0 +1,16 @@
+{
+  "name": "engin",
+  "version-string": "0.0.1",
+  "dependencies": [
+    "spdlog",
+    "jipu",
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}
