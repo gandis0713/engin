@@ -9,7 +9,7 @@
             "name": "[windows x64] Engin",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/x64-windows-ninja/debug/engin.exe",
+            "program": "${workspaceFolder}/build/x64-windows-ninja/debug/engin/engin_exe.exe",
             "args": [],
             "stopAtEntry": false,
             "environment": [],
@@ -18,7 +18,7 @@
             "name": "[arm64 osx] Engin",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/arm64-osx-ninja/debug/engin",
+            "program": "${workspaceFolder}/build/arm64-osx-ninja/debug/engin/engin_exe",
             "args": [],
             "stopAtEntry": false,
             "environment": [
