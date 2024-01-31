@@ -11,6 +11,10 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(engin)
 
+if(ENABLE_SAMPLE)
+    add_subdirectory(samples)
+endif()
+
 # install(EXPORT ${PROJECT_NAME}-config
 # NAMESPACE engin::
 # DESTINATION ${CMAKE_INSTALL_PREFIX}/share/${PROJECT_NAME}
