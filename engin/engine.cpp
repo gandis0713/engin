@@ -1,12 +1,16 @@
-#include <jipu/driver.h>
-#include <spdlog/spdlog.h>
+#include "engine.h"
 
-int main(int argc, char** argv)
+#include <jipu/driver.h>
+
+namespace engin
+{
+
+Engine::Engine()
 {
     jipu::DriverDescriptor driverDescriptor{
         .type = jipu::DriverType::kVulkan
     };
     auto driver = jipu::Driver::create(driverDescriptor);
-
-    return 0;
 }
+
+} // namespace engin

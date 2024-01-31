@@ -9,16 +9,18 @@ project(
 
 set(CMAKE_CXX_STANDARD 20)
 
-find_package(jipu REQUIRED)
-find_package(spdlog REQUIRED)
+add_subdirectory(engin)
 
-set(source_files
-    ${CMAKE_CURRENT_SOURCE_DIR}/engin/main.cpp
-)
+if(ENABLE_SAMPLE)
+    add_subdirectory(samples)
+endif()
 
-add_executable(engin ${source_files})
+if(ENABLE_TEST)
+    enable_testing() # enable test here.
+    add_subdirectory(test)
+endif()
 
-target_link_libraries(engin PRIVATE
-    jipu::jipu
-    spdlog::spdlog_header_only
-)
+# install(EXPORT ${PROJECT_NAME}-config
+# NAMESPACE engin::
+# DESTINATION ${CMAKE_INSTALL_PREFIX}/share/${PROJECT_NAME}
+# )

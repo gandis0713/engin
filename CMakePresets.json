@@ -10,7 +10,9 @@
 			"name": "base",
 			"cacheVariables": {
 				"CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-				"VCPKG_INSTALLED_DIR": "${sourceDir}/externals"
+				"VCPKG_INSTALLED_DIR": "${sourceDir}/externals",
+				"ENABLE_SAMPLE": true,
+				"ENABLE_TEST": true
 			},
 			"environment": {
 				"VCPKG_FEATURE_FLAGS": "manifests,binarycaching,registries"
