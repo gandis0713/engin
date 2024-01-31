@@ -33,6 +33,7 @@ function(configure_sample target)
 
     target_link_libraries(${target}
         PRIVATE
+        engin::engin
         spdlog::spdlog_header_only
     )
 
