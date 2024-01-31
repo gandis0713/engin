@@ -1,9 +1,9 @@
-#include "material.h"
+#include "texture.h"
 
 namespace engin
 {
 
-Material::Material()
+Texture::Texture()
 {
 }
 

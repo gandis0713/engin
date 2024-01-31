@@ -9,4 +9,10 @@ public:
     ~Entity() = default;
 };
 
+class EntityGenerator
+{
+public:
+    EntityGenerator() = default;
+};
+
 } // namespace engin
