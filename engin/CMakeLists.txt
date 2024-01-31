@@ -45,17 +45,11 @@ add_library(engin
     ${source_files}
 )
 add_library(engin::engin ALIAS engin)
+target_include_directories(engin
+    PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}>
+)
 target_link_libraries(engin PRIVATE
     ${private_libraries}
-)
-
-set(source_files_exe
-    ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
-)
-
-add_executable(engin_exe ${source_files_exe})
-
-target_link_libraries(engin_exe PRIVATE
-    ${private_libraries}
-    engin::engin
 )
